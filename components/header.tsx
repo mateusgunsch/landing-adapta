@@ -15,15 +15,15 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center gap-3">
 
-             <Image
+            <Image
               src="/images/logo-text-only.png"
               alt="Espaço Adapta T.O"
               width={100}
               height={40}
-              className="h-8 w-auto"
+              className="h-12 w-auto"
             />
 
-            <span className="text-xl font-bold text-adapta-primary hidden sm:block">Espaço Adapta T.O</span>
+            {/* <span className="text-xl font-bold text-adapta-primary hidden sm:block">Espaço Adapta T.O</span> */}
           </div>
 
           {/* Desktop Navigation */}
@@ -43,7 +43,7 @@ export default function Header() {
           </nav>
 
           <div className="hidden md:flex">
-            <Button className="bg-adapta-primary hover:bg-adapta-primary/90 text-white">Agendar Consulta</Button>
+            <Button className="bg-adapta-primary hover:bg-adapta-primary/90 text-white">Agendar Avaliação</Button>
           </div>
 
           {/* Mobile menu button */}

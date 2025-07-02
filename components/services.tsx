@@ -35,7 +35,7 @@ const services = [
   {
     icon: MessageCircle,
     title: "Fonoaudiologia",
-    description: "Desenvolvimento da comunicação, linguagem e habilidades de deglutição.",
+    description: "Desenvolvimento da comunicação, linguagem, interação social e motricidade orofacial.",
     color: "text-adapta-green",
   },
   {
@@ -47,7 +47,7 @@ const services = [
   {
     icon: Apple,
     title: "Nutrição",
-    description: "Orientação nutricional especializada para necessidades específicas do autismo.",
+    description: "Orientação nutricional especializada em seletividade alimentar.",
     color: "text-adapta-purple",
   },
 ]

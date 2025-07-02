@@ -5,17 +5,17 @@ const features = [
   {
     icon: Users,
     title: "Equipe Especializada",
-    description: "Profissionais com formação específica em autismo e transtornos do desenvolvimento.",
+    description: "Cada profissional contribui com sua visão técnica e abordagem específica, contribuindo para o atendimento multidisciplinar.",
   },
   {
     icon: Award,
-    title: "Abordagem Personalizada",
-    description: "Cada plano terapêutico é desenvolvido individualmente, respeitando as necessidades únicas.",
+    title: "Abordagem Terapêutica",
+    description: `Análise do Comportamento Aplicada (ABA), Modelo Denver de Intervenção Precoce (ESDM), Comunicação Alternativa e Aumentativa (CAA), Integração Sensorial (IS) e PediaSuit.`,
   },
   {
     icon: Clock,
-    title: "Acompanhamento Contínuo",
-    description: "Monitoramento constante do progresso com ajustes regulares no tratamento.",
+    title: "Acompanhamento Personalizado",
+    description: "Permite monitorar a evolução e ajustar estratégias terapêuticas conforme as suas necessidades.",
   },
 ]
 
@@ -50,9 +50,9 @@ export default function About() {
               ))}
             </div>
 
-            <div className="pt-4">
+            {/* <div className="pt-4">
               <Button className="bg-adapta-primary hover:bg-adapta-primary/90 text-white">Conheça Nossa Equipe</Button>
-            </div>
+            </div> */}
           </div>
 
           <div className="relative">
@@ -67,11 +67,11 @@ export default function About() {
                 </div>
 
                 <div className="grid grid-cols-2 gap-4 pt-6">
-                  <div className="text-center p-4 bg-white/50 rounded-xl">
+                  <div className="text-center p-4 bg-white/50 rounded-xl flex flex-col items-center">
                     <div className="text-2xl font-bold text-adapta-primary">8</div>
                     <div className="text-sm text-gray-600">Especialidades</div>
                   </div>
-                  <div className="text-center p-4 bg-white/50 rounded-xl">
+                  <div className="text-center p-4 bg-white/50 rounded-xl flex flex-col items-center">
                     <div className="text-2xl font-bold text-adapta-purple">100%</div>
                     <div className="text-sm text-gray-600">Dedicação</div>
                   </div>

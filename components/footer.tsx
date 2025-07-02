@@ -20,23 +20,38 @@ export default function Footer() {
             <h3 className="text-lg font-semibold">Serviços</h3>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <Link href="#" className="hover:text-white transition-colors">
+                <Link href="#servicos" className="hover:text-white transition-colors">
                   Psicologia
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-white transition-colors">
+                <Link href="#servicos" className="hover:text-white transition-colors">
                   Terapia Ocupacional
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-white transition-colors">
+                <Link href="#servicos" className="hover:text-white transition-colors">
                   Fonoaudiologia
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-white transition-colors">
+                <Link href="#servicos" className="hover:text-white transition-colors">
                   Fisioterapia
+                </Link>
+              </li>
+              <li>
+                <Link href="#servicos" className="hover:text-white transition-colors">
+                  Psicopedagogia
+                </Link>
+              </li>
+              <li>
+                <Link href="#servicos" className="hover:text-white transition-colors">
+                  Musicoterapia
+                </Link>
+              </li>
+              <li>
+                <Link href="#servicos" className="hover:text-white transition-colors">
+                  Acompanhamento Terapêutico
                 </Link>
               </li>
             </ul>

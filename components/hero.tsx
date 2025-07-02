@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Heart, Users, Star } from "lucide-react"
+import Link from "next/link"
 
 export default function Hero() {
   return (
@@ -12,8 +13,8 @@ export default function Hero() {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Cuidado especializado para
-                <span className="text-adapta-primary"> pessoas autistas</span>
+                Clínica especializada para atendimento de
+                <span className="text-adapta-primary"> pessoas com TEA (Transtorno do Espectro Autista)</span>
               </h1>
               <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
                 No Espaço Adapta T.O oferecemos atendimento multidisciplinar com profissionais especializados,
@@ -25,13 +26,14 @@ export default function Hero() {
               <Button size="lg" className="bg-adapta-primary hover:bg-adapta-primary/90 text-white">
                 Agendar Avaliação
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-adapta-primary text-adapta-primary hover:bg-adapta-primary hover:text-white bg-transparent"
-              >
-                Conhecer Serviços
-              </Button>
+              {/* <div className="w-full"> */}
+                <Link href="#servicos">
+                  <Button
+                    size="lg" variant="outline" className="border-adapta-primary text-adapta-primary hover:bg-adapta-primary hover:text-white bg-transparent w-full">
+                    Conhecer Serviços
+                  </Button>
+                </Link>
+              {/* </div> */}
             </div>
 
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8 pt-8">

@@ -4,6 +4,7 @@ import Services from "@/components/services"
 import About from "@/components/about"
 import Contact from "@/components/contact"
 import Footer from "@/components/footer"
+import TeaInfo from "@/components/tea-info"
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <TeaInfo />
         <Services />
         <About />
         <Contact />

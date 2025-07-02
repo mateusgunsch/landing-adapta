@@ -43,7 +43,8 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        {/* <div className="grid lg:grid-cols-2 gap-12"> */}
+        <div className="grid lg:grid-cols-1 gap-12 w-fit mx-auto">
           <div className="space-y-8">
             <div className="grid sm:grid-cols-2 gap-6">
               {contactInfo.map((item, index) => (
@@ -79,7 +80,7 @@ export default function Contact() {
             </Card>
           </div>
 
-          <Card className="border-0 shadow-md">
+          {/* <Card className="border-0 shadow-md">
             <CardHeader>
               <CardTitle className="text-xl font-semibold text-gray-900">Envie uma Mensagem</CardTitle>
             </CardHeader>
@@ -111,7 +112,7 @@ export default function Contact() {
                 </Button>
               </form>
             </CardContent>
-          </Card>
+          </Card> */}
         </div>
       </div>
     </section>
