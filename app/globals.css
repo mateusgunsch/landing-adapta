@@ -92,3 +92,20 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* Scroll suave para navegação */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ajuste para compensar o header fixo */
+section {
+  scroll-margin-top: 4rem;
+}
+
+/* Melhoria na transição de scroll */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}

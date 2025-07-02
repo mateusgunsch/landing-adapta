@@ -4,6 +4,7 @@ import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
+import Image from "next/image"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -12,10 +13,17 @@ export default function Header() {
     <header className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex items-center">
-            <Link href="/" className="text-2xl font-bold text-adapta-primary">
-              Espaço Adapta T.O
-            </Link>
+          <div className="flex items-center gap-3">
+
+             <Image
+              src="/images/logo-text-only.png"
+              alt="Espaço Adapta T.O"
+              width={100}
+              height={40}
+              className="h-8 w-auto"
+            />
+
+            <span className="text-xl font-bold text-adapta-primary hidden sm:block">Espaço Adapta T.O</span>
           </div>
 
           {/* Desktop Navigation */}
