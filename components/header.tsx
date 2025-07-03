@@ -5,6 +5,7 @@ import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
 import Image from "next/image"
+import WhatsAppButton from "./whatsapp-button"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -43,7 +44,7 @@ export default function Header() {
           </nav>
 
           <div className="hidden md:flex">
-            <Button className="bg-adapta-primary hover:bg-adapta-primary/90 text-white">Agendar Avaliação</Button>
+            <WhatsAppButton />
           </div>
 
           {/* Mobile menu button */}

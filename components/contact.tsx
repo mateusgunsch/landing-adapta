@@ -3,24 +3,25 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Phone, Mail, MapPin, Clock } from "lucide-react"
+import WhatsAppButton from "./whatsapp-button"
 
 const contactInfo = [
   {
     icon: Phone,
     title: "Telefone",
-    info: "(11) 99999-9999",
+    info: "(65) 99989-3202 ou (65) 99233-0091",
     color: "text-adapta-primary",
   },
   {
     icon: Mail,
     title: "E-mail",
-    info: "contato@adaptato.com.br",
+    info: "financeiroadaptato@hotmail.com",
     color: "text-adapta-purple",
   },
   {
     icon: MapPin,
     title: "Endereço",
-    info: "Rua das Flores, 123 - Centro",
+    info: `Matriz: Rua Major Gama nº 950, Centro Sul - Cuiabá/MT\nFilial: Rua Barão de Melgaço nº 2350 Edifício Barão Center Sala 104, Centro Sul - Cuiabá/MT`,
     color: "text-adapta-green",
   },
   {
@@ -58,7 +59,7 @@ export default function Contact() {
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-600">{item.info}</p>
+                    <p className="text-gray-600 whitespace-pre-line">{item.info}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -73,46 +74,10 @@ export default function Contact() {
                   Nossa equipe está pronta para oferecer o melhor atendimento. Agende uma avaliação inicial e conheça
                   nosso trabalho.
                 </p>
-                <Button className="bg-adapta-primary hover:bg-adapta-primary/90 text-white w-full">
-                  Agendar Agora
-                </Button>
+                <WhatsAppButton />
               </CardContent>
             </Card>
           </div>
-
-          {/* <Card className="border-0 shadow-md">
-            <CardHeader>
-              <CardTitle className="text-xl font-semibold text-gray-900">Envie uma Mensagem</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <form className="space-y-6">
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-gray-700">Nome</label>
-                    <Input placeholder="Seu nome completo" />
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-gray-700">Telefone</label>
-                    <Input placeholder="(11) 99999-9999" />
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-gray-700">E-mail</label>
-                  <Input type="email" placeholder="seu@email.com" />
-                </div>
-
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-gray-700">Mensagem</label>
-                  <Textarea placeholder="Conte-nos como podemos ajudar..." className="min-h-[120px]" />
-                </div>
-
-                <Button className="bg-adapta-primary hover:bg-adapta-primary/90 text-white w-full">
-                  Enviar Mensagem
-                </Button>
-              </form>
-            </CardContent>
-          </Card> */}
         </div>
       </div>
     </section>

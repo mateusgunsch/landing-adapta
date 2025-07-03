@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Brain, Hand, Activity, BookOpen, Music, MessageCircle, Dumbbell, Apple } from "lucide-react"
+import { Brain, Hand, Activity, BookOpen, Music, MessageCircle, Dumbbell, Apple, UserCheck } from "lucide-react"
 
 const services = [
   {
@@ -50,6 +50,12 @@ const services = [
     description: "Orientação nutricional especializada em seletividade alimentar.",
     color: "text-adapta-purple",
   },
+  {
+    icon: UserCheck,
+    title: "Acompanhamento Terapêutico",
+    description: "Suporte individualizado no ambiente natural para desenvolvimento de habilidades sociais e autonomia.",
+    color: "text-adapta-green",
+  },
 ]
 
 export default function Services() {
@@ -64,7 +70,7 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <Card key={index} className="hover:shadow-lg transition-shadow duration-300 border-0 shadow-md">
               <CardHeader className="text-center pb-4">

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Heart, Users, Star } from "lucide-react"
 import Link from "next/link"
+import WhatsAppButton from "./whatsapp-button"
 
 export default function Hero() {
   return (
@@ -23,16 +24,16 @@ export default function Hero() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-adapta-primary hover:bg-adapta-primary/90 text-white">
+              {/* <Button size="lg" className="bg-adapta-primary hover:bg-adapta-primary/90 text-white">
                 Agendar Avaliação
-              </Button>
-              {/* <div className="w-full"> */}
-                <Link href="#servicos">
-                  <Button
-                    size="lg" variant="outline" className="border-adapta-primary text-adapta-primary hover:bg-adapta-primary hover:text-white bg-transparent w-full">
-                    Conhecer Serviços
-                  </Button>
-                </Link>
+              </Button> */}
+              <WhatsAppButton />
+              <Link href="#servicos">
+                <Button
+                  size="lg" variant="outline" className="border-adapta-primary text-adapta-primary hover:bg-adapta-primary hover:text-white bg-transparent w-full">
+                  Conhecer Serviços
+                </Button>
+              </Link>
               {/* </div> */}
             </div>
 
