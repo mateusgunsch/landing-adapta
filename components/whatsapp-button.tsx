@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 
 export default function WhatsAppButton() {
     const phone = '5565999893202';
-    const message = encodeURIComponent('Olá, gostaria de saber mais sobre seus serviços e marcar    uma consulta.');
+    const message = encodeURIComponent('Olá, gostaria de saber mais sobre seus serviços e marcar uma consulta.');
     const whatsappLink = `https://wa.me/${phone}?text=${message}`;
 
     return (

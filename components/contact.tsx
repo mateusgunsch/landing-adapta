@@ -21,7 +21,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Endereço",
-    info: `Matriz: Rua Major Gama nº 950, Centro Sul - Cuiabá/MT\nFilial: Rua Barão de Melgaço nº 2350 Edifício Barão Center Sala 104, Centro Sul - Cuiabá/MT`,
+    info: `Matriz: Rua Major Gama, 950, Centro Sul - Cuiabá/MT\n\nFilial: Rua Barão de Melgaço, 2350, Edifício Barão Center, Sala 104, Centro Sul - Cuiabá/MT`,
     color: "text-adapta-green",
   },
   {
