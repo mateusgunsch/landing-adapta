@@ -14,6 +14,20 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.png",
   },
+  keywords: [
+    "Espaço Adapta TO",
+    "Psicologia",
+    "Terapia Ocupacional",
+    "Psicomotricidade",
+    "Psicopedagogia",
+    "Musicoterapia",
+    "Fonoaudiologia",
+    "Fisioterapia",
+    "Autismo",
+    "Terapia",
+    "TEA",
+    "Clínica",
+  ],
 }
 
 export default function RootLayout({

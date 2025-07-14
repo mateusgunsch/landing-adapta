@@ -32,8 +32,17 @@ export default function Hero() {
                   Conhecer Serviços
                 </Button>
               </Link>
-              {/* </div> */}
             </div>
+
+            <div className="relative w-full block xl:hidden">
+              <Image
+                src="/frente.jpg"
+                alt="Sala de atendimento individual - Espaço Adapta T.O"
+                width={600}
+                height={400}
+                className="w-full h-full object-cover rounded-3xl"
+              />
+          </div>
 
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8 pt-8">
               <div className="flex items-center gap-2">
@@ -51,8 +60,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="relative w-full">
-            {/* <div className="bg-gradient-to-br from-adapta-yellow/20 to-adapta-primary/10 rounded-3xl p-6 sm:p-8 h-80 sm:h-96 flex items-center justify-center"> */}
+          <div className="relative w-full hidden xl:block">
               <Image
                 src="/frente.jpg"
                 alt="Sala de atendimento individual - Espaço Adapta T.O"
@@ -60,14 +68,6 @@ export default function Hero() {
                 height={400}
                 className="w-full h-full object-cover rounded-3xl"
               />
-              {/* <div className="text-center space-y-4">
-                <div className="w-24 h-24 sm:w-32 sm:h-32 bg-adapta-yellow/30 rounded-full mx-auto flex items-center justify-center">
-                  <Heart className="h-12 w-12 sm:h-16 sm:w-16 text-adapta-primary" />
-                </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900">Espaço Adapta T.O</h3>
-                <p className="text-gray-600">Transformando vidas através do cuidado especializado</p>
-              </div> */}
-            {/* </div> */}
           </div>
         </div>
       </div>
