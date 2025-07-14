@@ -34,7 +34,7 @@ const contactInfo = [
 
 export default function Contact() {
   return (
-    <section id="contato" className="py-20 bg-gray-50">
+    <section id="contato" className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl font-bold text-gray-900">Entre em Contato</h2>

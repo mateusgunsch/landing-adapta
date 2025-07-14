@@ -9,9 +9,11 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: "v0 App",
-  description: "Created with v0",
-  generator: "v0.dev",
+  title: "Espaço Adapta TO",
+  description: "Clínica especializada para atendimento de pessoas com TEA",
+  icons: {
+    icon: "/favicon.png",
+  },
 }
 
 export default function RootLayout({

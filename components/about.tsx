@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Users, Award, Clock } from "lucide-react"
+import { Card, CardContent } from "./ui/card"
 
 const features = [
   {
@@ -68,7 +69,7 @@ export default function About() {
 
                 <div className="grid grid-cols-2 gap-4 pt-6">
                   <div className="text-center p-4 bg-white/50 rounded-xl flex flex-col items-center">
-                    <div className="text-2xl font-bold text-adapta-primary">8</div>
+                    <div className="text-2xl font-bold text-adapta-primary">9</div>
                     <div className="text-sm text-gray-600">Especialidades</div>
                   </div>
                   <div className="text-center p-4 bg-white/50 rounded-xl flex flex-col items-center">
@@ -79,6 +80,49 @@ export default function About() {
               </div>
             </div>
           </div>
+        </div>
+        {/* Nossa História */}
+        <div className="max-w-4xl mx-auto mt-12">
+          <Card className="border-0 shadow-lg bg-gradient-to-r from-adapta-yellow/10 to-adapta-purple/5">
+            <CardContent className="p-8 lg:p-12">
+              <div className="text-center mb-8">
+                <div className="flex items-center justify-center gap-3 mb-4">
+                  <h3 className="text-3xl font-bold text-gray-900">Nossa História</h3>
+                </div>
+                <div className="w-24 h-1 bg-adapta-primary mx-auto rounded-full"></div>
+              </div>
+
+              <div className="space-y-6 text-gray-700 leading-relaxed">
+                <p>
+                  <span className="font-semibold text-adapta-primary">Sou Sumara Najla, Terapeuta Ocupacional</span>, e
+                  iniciei essa trajetória em 2019, com o coração cheio de propósito e fé. A Adapta nasceu em 2025,
+                  oferecendo inicialmente atendimentos em Terapia Ocupacional, Psicologia e Fonoaudiologia, com o desejo
+                  sincero de acolher e transformar vidas.
+                </p>
+
+                <p>
+                  Conforme as demandas foram chegando, senti que era hora de algo maior. Orei, pedi a Deus direção,
+                  porque aquilo não estava nos meus planos. E Deus me deu a resposta, foi então que convidei minha irmã,{" "}
+                  Sâmara Ribeiro, para caminhar comigo nessa
+                  missão.
+                </p>
+
+                <p>
+                  Hoje, ela é minha sócia e parceira, contribuindo com dedicação, ética e amor, para que possamos,
+                  juntas, dar continuidade a esse projeto de cuidado e acolhimento. Com a expansão conseguimos alcançar
+                  ainda mais famílias, oferecendo um atendimento humano, sensível e comprometido.
+                </p>
+
+                <div className="bg-white/60 rounded-lg p-6 border-l-4 border-adapta-primary">
+                  <p className="font-medium text-gray-800 italic">
+                    "Sou grata a cada profissional que faz parte do nosso corpo clínico e a cada família que confia em
+                    nós. Seguimos firmes nessa missão, guiadas por Deus."
+                  </p>
+                  <p className="text-right mt-3 text-adapta-primary font-semibold">— Sumara Najla, Fundadora</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
