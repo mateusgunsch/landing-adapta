@@ -2,10 +2,26 @@ import Link from "next/link"
 import { Heart, Phone, Mail, MapPin } from "lucide-react"
 
 export default function Footer() {
+  const phoneNumbers = [
+    { text: "(65) 99989-3202", link: "tel:+5565999893202" },
+    { text: "(65) 99233-0091", link: "tel:+5565992330091" },
+  ]
+  const emails = [{ text: "financeiroadaptato@hotmail.com", link: "mailto:financeiroadaptato@hotmail.com" }]
+  const addresses = [
+    {
+      text: "Matriz: Rua Major Gama, 950, Centro Sul - Cuiabá/MT",
+      link: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent("Rua Major Gama, 950, Centro Sul - Cuiabá/MT")}`,
+    },
+    {
+      text: "Filial: Rua Barão de Melgaço, 2350, Edifício Barão Center, Sala 104, Centro Sul - Cuiabá/MT",
+      link: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent("Rua Barão de Melgaço, 2350, Edifício Barão Center, Sala 104, Centro Sul - Cuiabá/MT")}`,
+    },
+  ]
+
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-3 gap-8 justify-between">
+        <div className="grid lg:grid-cols-3 gap-8 justify-between">
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <Heart className="h-6 w-6 text-adapta-primary" />
@@ -61,16 +77,40 @@ export default function Footer() {
             <h3 className="text-lg font-semibold">Contato</h3>
             <div className="space-y-3 text-gray-400">
               <div className="flex items-center gap-2">
-                <Phone className="h-4 w-4" />
-                <span>(65) 99989-3202</span>
+                <Phone className="min-h-4 min-w-4 max-h-4 max-w-4" />
+                <div className="flex flex-col">
+                  {phoneNumbers.map((item, index) => (
+                    <a key={index} href={item.link} className="hover:text-white transition-colors">
+                      {item.text}
+                    </a>
+                  ))}
+                </div>
               </div>
               <div className="flex items-center gap-2">
-                <Mail className="h-4 w-4" />
-                <span>financeiroadaptato@hotmail.com</span>
+                <Mail className="min-h-4 min-w-4 max-h-4 max-w-4" />
+                <div className="flex flex-col">
+                  {emails.map((item, index) => (
+                    <a key={index} href={item.link} className="hover:text-white transition-colors text-md">
+                      {item.text}
+                    </a>
+                  ))}
+                </div>
               </div>
               <div className="flex items-center gap-2">
-                <MapPin className="h-4 w-4" />
-                <span>Rua Major Gama nº 950, Centro Sul - Cuiabá/MT</span>
+                <MapPin className="min-h-4 min-w-4 max-h-4 max-w-4" />
+                <div className="flex flex-col">
+                  {addresses.map((item, index) => (
+                    <a
+                      key={index}
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-white transition-colors"
+                    >
+                      {item.text}
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

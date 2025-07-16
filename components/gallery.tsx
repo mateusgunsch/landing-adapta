@@ -34,6 +34,22 @@ const galleryImages = [
         src: "/salas/sala2-2.jpg",
         alt: "Sala de musicoterapia - Espaço Adapta T.O",
     },
+    {
+        src: "/salas/to1.jpg",
+        alt: "Sala de musicoterapia - Espaço Adapta T.O",
+    },
+    {
+        src: "/salas/to2.jpg",
+        alt: "Sala de musicoterapia - Espaço Adapta T.O",
+    },
+    {
+        src: "/salas/to3.jpg",
+        alt: "Sala de musicoterapia - Espaço Adapta T.O",
+    },
+    {
+        src: "/salas/to4.jpg",
+        alt: "Sala de musicoterapia - Espaço Adapta T.O",
+    },
 ]
 
 export default function Gallery() {

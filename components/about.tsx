@@ -95,8 +95,8 @@ export default function About() {
               <div className="space-y-6 text-gray-700 leading-relaxed">
                 <p>
                   <span className="font-semibold text-adapta-primary">Sou Sumara Najla, Terapeuta Ocupacional</span>, e
-                  iniciei essa trajetória em 2019, com o coração cheio de propósito e fé. A Adapta nasceu em 2025,
-                  oferecendo inicialmente atendimentos em Terapia Ocupacional, Psicologia e Fonoaudiologia, com o desejo
+                  iniciei essa trajetória em 2019, com o coração cheio de propósito e fé. A Adapta nasceu oferecendo inicialmente atendimentos em 
+                  Terapia Ocupacional, Psicologia e Fonoaudiologia, com o desejo
                   sincero de acolher e transformar vidas.
                 </p>
 

@@ -1,7 +1,4 @@
-import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
 import { Phone, Mail, MapPin, Clock } from "lucide-react"
 import WhatsAppButton from "./whatsapp-button"
 
@@ -9,26 +6,38 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Telefone",
-    info: "(65) 99989-3202 ou (65) 99233-0091",
     color: "text-adapta-primary",
+    details: [
+      { text: "(65) 99989-3202", link: "tel:+5565999893202" },
+      { text: "(65) 99233-0091", link: "tel:+5565992330091" },
+    ],
   },
   {
     icon: Mail,
     title: "E-mail",
-    info: "financeiroadaptato@hotmail.com",
     color: "text-adapta-purple",
+    details: [{ text: "financeiroadaptato@hotmail.com", link: "mailto:financeiroadaptato@hotmail.com" }],
   },
   {
     icon: MapPin,
     title: "Endereço",
-    info: `Matriz: Rua Major Gama, 950, Centro Sul - Cuiabá/MT\n\nFilial: Rua Barão de Melgaço, 2350, Edifício Barão Center, Sala 104, Centro Sul - Cuiabá/MT`,
     color: "text-adapta-green",
+    details: [
+      {
+        text: "Matriz: Rua Major Gama, 950, Centro Sul - Cuiabá/MT",
+        link: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent("Rua Major Gama, 950, Centro Sul - Cuiabá/MT")}`,
+      },
+      {
+        text: "Filial: Rua Barão de Melgaço, 2350, Edifício Barão Center, Sala 104, Centro Sul - Cuiabá/MT",
+        link: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent("Rua Barão de Melgaço, 2350, Edifício Barão Center, Sala 104, Centro Sul - Cuiabá/MT")}`,
+      },
+    ],
   },
   {
     icon: Clock,
     title: "Horário",
-    info: "Seg à Sex: 8h às 18h",
     color: "text-adapta-primary",
+    details: [{ text: "Seg à Sex: 8h às 18h", link: null }],
   },
 ]
 
@@ -59,7 +68,27 @@ export default function Contact() {
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-600 whitespace-pre-line">{item.info}</p>
+                    <div className="space-y-1">
+                      {" "}
+                      {/* Adicionado para espaçamento entre múltiplos detalhes */}
+                      {item.details.map((detail, detailIndex) =>
+                        detail.link ? (
+                          <a
+                            key={detailIndex}
+                            href={detail.link}
+                            target={item.title === "Endereço" ? "_blank" : undefined} // Abre em nova aba apenas para o Maps
+                            rel={item.title === "Endereço" ? "noopener noreferrer" : undefined}
+                            className="block text-gray-600 hover:underline"
+                          >
+                            {detail.text}
+                          </a>
+                        ) : (
+                          <p key={detailIndex} className="text-gray-600">
+                            {detail.text}
+                          </p>
+                        ),
+                      )}
+                    </div>
                   </CardContent>
                 </Card>
               ))}
