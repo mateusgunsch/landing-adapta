@@ -13,47 +13,51 @@ import {
 } from "@/components/ui/carousel"
 import { useEffect } from "react"
 
-const galleryImages = [
+const galleryItems = [
     {
+        type: "image",
         src: "/salas/sala1-1.jpg",
-        alt: "Sala de atendimento individual - Espaço Adapta T.O",
     },
     {
+        type: "image",
         src: "/salas/sala1-2.jpg",
-        alt: "Área de atividades em grupo - Espaço Adapta T.O",
     },
     {
-        src: "/salas/sala1-3.jpg",
-        alt: "Sala de psicomotricidade - Espaço Adapta T.O",
-    },
-    {
+        type: "image",
         src: "/salas/sala2-1.jpg",
-        alt: "Recepção acolhedora - Espaço Adapta T.O",
     },
     {
+        type: "image",
         src: "/salas/sala2-2.jpg",
-        alt: "Sala de musicoterapia - Espaço Adapta T.O",
     },
     {
+        type: "image",
         src: "/salas/to1.jpg",
-        alt: "Sala de musicoterapia - Espaço Adapta T.O",
     },
     {
+        type: "image",
         src: "/salas/to2.jpg",
-        alt: "Sala de musicoterapia - Espaço Adapta T.O",
     },
     {
+        type: "image",
         src: "/salas/to3.jpg",
-        alt: "Sala de musicoterapia - Espaço Adapta T.O",
     },
     {
+        type: "image",
         src: "/salas/to4.jpg",
-        alt: "Sala de musicoterapia - Espaço Adapta T.O",
+    },
+    {
+        type: "video",
+        src: "/salas/video3.mp4",
+    },
+    {
+        type: "image",
+        src: "/salas/sala3.jpg",
     },
 ]
 
 export default function Gallery() {
-    const [selectedImage, setSelectedImage] = useState<number | null>(null)
+    const [selectedItemIndex, setSelectedItemIndex] = useState<number | null>(null)
     const [api, setApi] = useState<CarouselApi>()
     const [current, setCurrent] = useState(0)
     const [count, setCount] = useState(0)
@@ -70,6 +74,12 @@ export default function Gallery() {
         setCurrent(api.selectedScrollSnap() + 1)
         })
     }, [api])
+
+    const handleItemClick = (index: number) => {
+        setSelectedItemIndex(index)
+    }
+
+    const selectedItem = selectedItemIndex !== null ? galleryItems[selectedItemIndex] : null
 
     return (
         <section className="py-20 bg-gray-50">
@@ -91,24 +101,31 @@ export default function Gallery() {
                 }}
             >
                 <CarouselContent>
-                {galleryImages.map((image, index) => (
+                {galleryItems.map((item, index) => (
                     // <CarouselItem key={index}>
                     <CarouselItem key={index} className="flex justify-center">
                     {/* <Card className="border-0 shadow-lg overflow-hidden"> */}
-                        <Card className="border-0 shadow-lg overflow-hidden w-fit max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto">
-                            <div
-                                className="relative group cursor-pointer aspect-[3/4] overflow-hidden max-h-[300px] sm:max-h-[400px] lg:max-h-[500px]"
-                                onClick={() => setSelectedImage(index)}
-                            >
-                            <img
-                                src={image.src || "/placeholder.svg"}
-                                alt={image.alt}
-                                // className="w-full h-64 sm:h-80 lg:h-96 object-cover transition-transform duration-300 group-hover:scale-105"
-                                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                            />
+                        <Card className="border-0 shadow-lg overflow-hidden w-fit max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto" onClick={() => handleItemClick(index)}>
+                            <div className="relative group cursor-pointer aspect-[3/4] overflow-hidden max-h-[300px] sm:max-h-[400px] lg:max-h-[500px]">
+                                {item.type === "image" ? (
+                                    <img
+                                        src={item.src || "/placeholder.svg"}
+                                        alt={"Imagem " + index}
+                                        // className="w-full h-64 sm:h-80 lg:h-96 object-cover transition-transform duration-300 group-hover:scale-105"
+                                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                    />
+                                ) : (
+                                    <video
+                                        src={item.src}
+                                        controls
+                                        className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                                        preload="metadata" // Carrega apenas metadados para otimização
+                                    />
+                                )}
+                            
                             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
                                 <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
-                                <p className="text-lg font-semibold mb-2">Clique para ampliar</p>
+                                <p className="text-lg font-semibold mb-2">{item.type === "image" ? "Clique para ampliar" : "Clique para reproduzir"}</p>
                                 </div>
                             </div>
                             </div>
@@ -137,26 +154,36 @@ export default function Gallery() {
             </div>
 
             {/* Modal Simples */}
-            <Dialog open={selectedImage !== null} onOpenChange={() => setSelectedImage(null)}>
-            <DialogTitle className="hidden">Imagem ampliada</DialogTitle>
+            <Dialog open={selectedItem !== null} onOpenChange={() => setSelectedItemIndex(null)}>
+            <DialogTitle className="hidden">Itemm ampliada</DialogTitle>
             <DialogContent
                 className="max-w-4xl w-[90vw] max-h-[80vh] p-0 bg-transparent border-0 shadow-none content-center lg:[&>button]:absolute lg:[&>button]:right-44 lg:[&>button]:top-4 [&>button]:z-50 [&>button]:bg-black/20 [&>button]:hover:bg-black/40 [&>button]:text-white [&>button]:rounded-full"
                 onClick={(e) => {
-                // Fecha o modal se clicar fora da imagem
+                // Fecha o modal se clicar fora da itemm
                 if (e.target === e.currentTarget) {
-                    setSelectedImage(null)
+                    setSelectedItemIndex(null)
                 }
                 }}
             >
                 <div className="relative flex items-center justify-center w-full h-full max-h-[80vh]">
-                {selectedImage !== null && (
+                {selectedItem && selectedItem.type === "image" ? (
                     <img
-                    src={galleryImages[selectedImage].src || "/placeholder.svg"}
-                    alt={galleryImages[selectedImage].alt}
-                    className="max-w-full max-h-full object-contain rounded-lg"
-                    onClick={(e) => e.stopPropagation()}
+                        src={selectedItem.src || "/placeholder.svg"}
+                        alt={"Imagem " + selectedItemIndex}
+                        className="max-w-full max-h-full object-contain rounded-lg"
+                        onClick={(e) => e.stopPropagation()}
                     />
-                )}
+                ) : selectedItem && selectedItem.type === "video" ? (
+                    <video
+                        src={selectedItem.src}
+                        className="max-w-full max-h-full object-contain rounded-lg"
+                        controls
+                        autoPlay
+                        playsInline
+                        muted
+                        onClick={(e) => e.stopPropagation()}
+                    />
+                ) : null}
                 </div>
             </DialogContent>
             </Dialog>

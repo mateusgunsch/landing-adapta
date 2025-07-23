@@ -15,8 +15,8 @@ export default function Hero() {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Clínica especializada para atendimento de
-                <span className="text-adapta-primary"> pessoas com TEA (Transtorno do Espectro Autista)</span>
+                Clínica especializada para atendimento em
+                <span className="text-adapta-primary"> TEA (Transtorno do Espectro Autista)</span>
               </h1>
               <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
                 No Espaço Adapta T.O oferecemos atendimento multidisciplinar com profissionais especializados,
