@@ -16,7 +16,7 @@ const contactInfo = [
     icon: Mail,
     title: "E-mail",
     color: "text-adapta-purple",
-    details: [{ text: "financeiroadaptato@hotmail.com", link: "mailto:financeiroadaptato@hotmail.com" }],
+    details: [{ text: "espacoadaptatocomercial@hotmail.com", link: "mailto:espacoadaptatocomercial@hotmail.com" }],
   },
   {
     icon: MapPin,

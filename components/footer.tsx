@@ -6,7 +6,7 @@ export default function Footer() {
     { text: "(65) 99989-3202", link: "tel:+5565999893202" },
     { text: "(65) 99233-0091", link: "tel:+5565992330091" },
   ]
-  const emails = [{ text: "financeiroadaptato@hotmail.com", link: "mailto:financeiroadaptato@hotmail.com" }]
+  const emails = [{ text: "espacoadaptatocomercial@hotmail.com", link: "mailto:espacoadaptatocomercial@hotmail.com" }]
   const addresses = [
     {
       text: "Matriz: Rua Major Gama, 950, Centro Sul - Cuiabá/MT",

@@ -64,10 +64,6 @@ export default function Services() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl font-bold text-gray-900">Nossos Serviços</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Oferecemos uma abordagem multidisciplinar completa, com profissionais especializados em cada área para
-            proporcionar o melhor cuidado e desenvolvimento.
-          </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
