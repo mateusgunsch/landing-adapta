@@ -27,6 +27,13 @@ export const metadata: Metadata = {
     "Terapia",
     "TEA",
     "Clínica",
+    "Adapta TO",
+    "Cuiaba",
+    "Cuiabá",
+    "Cuiaba - MT",
+    "Cuiabá - MT",
+    "Mato Grosso",
+    "MT"
   ],
 }
 
